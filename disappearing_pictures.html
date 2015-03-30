@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title> Disappearing Pictures</title>
+	<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script type="text/javascript">	
+		$(document).ready(function(){
+
+			$(document).on("click","#new_image",function(){
+				var image = $("input[name='upload']").val();
+				$('img').attr('src',image);
+				return false;
+			});
+			$(document).on("click",".pic",function(){
+				$(this).children('img').fadeOut();
+			});
+			$(document).on('click','#reset',function(){
+				$('img').fadeIn();
+			});
+		});
+	</script>
+	<style type="text/css">
+		.pic{
+			display:inline-block;
+			width:205px;
+			height:205px;
+		}
+		img{
+			width:200px;
+			height:200px;
+		}
+		.container{
+			width:700px;
+			display:inline-block;
+			margin-left:100px;
+			vertical-align: top;
+		}
+		input{
+			width:200px;
+		}
+		#new_image{
+			width:50px;
+		}
+		.container h2{
+			border-bottom:1px solid black;
+			font-family: sans-serif;
+		}
+		.image_upload{
+			display:inline-block;
+			vertical-align: top;
+		}
+		.all_elements h4{
+			border-bottom:1px solid black;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+<div class='all_elements'>
+	<div class='image_upload'>
+		<h4>Upload Image:</h4>
+
+		<form action='hello' method='post'>
+			<input type='text' name='upload' placeholder='Enter Image URL'>
+			<input type='submit' value='Submit' id='new_image'>
+		</form>
+		<button id='reset'>Reset</button>
+	</div>
+	
+<div class='container'>
+	<h2>Disappearing Pictures</h2>
+	<div class='pic'>
+		<img src="">
+	</div>
+	<div class='pic'>
+		<img src="">
+	</div>
+	<div class='pic'>
+		<img src="">
+	</div>
+	<div class='pic'>
+		<img src="">
+	</div>
+	<div class='pic'>
+		<img src="">
+	</div>
+	<div class='pic'>
+		<img src="">
+	</div>
+</div>
+
+
+</div>
+	
+</body>
+</html>
+

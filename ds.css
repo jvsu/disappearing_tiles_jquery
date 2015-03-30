@@ -1,0 +1,33 @@
+.cat{
+	display:inline-block;
+	width:205px;
+	height:205px;
+		}
+img{
+	width:200px;
+	height:200px;
+	}
+.container{
+	width:700px;
+	display:inline-block;
+	margin-left:100px;
+	vertical-align: top;
+	}
+input{
+	width:200px;
+	}
+#new_image{
+	width:50px;
+	}
+.container h2{
+	border-bottom:1px solid black;
+	font-family: sans-serif;
+	}
+.image_upload{
+	display:inline-block;
+	vertical-align: top;
+	}
+.all_elements h4{
+	border-bottom:1px solid black;
+	font-family: sans-serif;
+	}
